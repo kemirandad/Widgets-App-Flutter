@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:myapp/config/menu/menu_items.dart';
+import 'package:myapp/presentation/widgets/drawers/side_menu.dart';
 
 class HomeScreen extends StatelessWidget {
   static const String name = 'home_screen';
@@ -9,10 +10,15 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scaffoldKey = GlobalKey<ScaffoldState>();
+
     return Scaffold(
+      
+        key: scaffoldKey,
         appBar: AppBar(
           title: const Text('Widgets + Material 3'),
         ),
+        drawer: SideMenu(scaffoldKey: scaffoldKey),
         body: _HomeScreen());
   }
 }
@@ -38,7 +44,6 @@ class _HomeScreen extends StatelessWidget {
                 color: color.primary,
               ),
               onTap: () {
-                //context.go(menuItem.route, extra: menuItem);
                 context.push(menuItem.route);
               },
             );

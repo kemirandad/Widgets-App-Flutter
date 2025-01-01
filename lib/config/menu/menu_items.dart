@@ -54,4 +54,14 @@ const menuItems = <MenuItems>[
       subTitle: 'Listas infinitas y pull to refresh',
       icon: Icons.list_alt_rounded,
       route: '/infinite'),
+  MenuItems(
+      title: 'Counter Riverpod',
+      subTitle: 'Incrementador Riverpod',
+      icon: Icons.add,
+      route: '/counter'),
+  MenuItems(
+      title: 'Theme Changer',
+      subTitle: 'Seleccionar color de la aplicación',
+      icon: Icons.color_lens_outlined,
+      route: '/theme_changer'),
 ];

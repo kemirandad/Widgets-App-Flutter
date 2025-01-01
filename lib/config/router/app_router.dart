@@ -4,7 +4,7 @@ import 'package:myapp/presentation/screens.dart';
 
 class AppRouter {
   final GoRouter router = GoRouter(
-  initialLocation: '/',
+  initialLocation: '/theme_changer',
   routes: <RouteBase>[
     GoRoute(
       path: '/',
@@ -58,6 +58,18 @@ class AppRouter {
           path: '/infinite',
           builder: (BuildContext context, GoRouterState state) {
             return const InfiniteScrollScreen();
+          },
+        ),
+        GoRoute(
+          path: '/counter',
+          builder: (BuildContext context, GoRouterState state) {
+            return const CounterScreen();
+          },
+        ),
+        GoRoute(
+          path: '/theme_changer',
+          builder: (BuildContext context, GoRouterState state) {
+            return const ThemeChangerScreen();
           },
         ),
       ],
